@@ -1,0 +1,12 @@
+server:
+  port: 3000
+
+db:
+  host: 'localhost'
+  type: 'postgres'
+  port: 5432
+  database: 'postgres'
+  password: 'utkarsh'
+
+jwt:
+  expiresIn: 3600
