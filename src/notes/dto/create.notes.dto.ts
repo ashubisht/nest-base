@@ -16,3 +16,9 @@ export class CreateNote {
   status: NoteStatus;
 
 }
+
+export interface CreateNoteRequest {
+  subject: string;
+  body: string;
+  status: string;
+}

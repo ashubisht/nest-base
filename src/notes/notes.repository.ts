@@ -20,15 +20,12 @@ export class NoteRepository extends Repository<Note> {
 
 
   async createNote(noteDto: CreateNote, user: User) {
-    console.log(noteDto);
-    console.log(user);
     const note = new Note();
     note.title = noteDto.title;
     note.description = noteDto.description;
     note.status = noteDto.status;
     note.user = user;
     // note.userId = user.id;
-    console.log(note);
 
     try {
       const savedNote = await note.save();

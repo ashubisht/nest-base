@@ -4,6 +4,7 @@ import { User } from '../auth/entity/user.entity';
 import { CreateNote } from './dto/create.notes.dto';
 import { RequestUser } from "../auth/auth.decorator";
 import { AuthGuard } from '@nestjs/passport';
+import { NoteValidation } from './pipes/addnotes.pipe';
 
 @Controller('notes')
 @UseGuards(AuthGuard())
@@ -25,8 +26,11 @@ export class NotesController {
   }
 
   @Post("/")
-  @UsePipes(ValidationPipe)
+  @UsePipes(NoteValidation, ValidationPipe)
   addNote(@Body() note: CreateNote, @RequestUser() user: User) {
+    // console.log("Controller: ", note);
+    // console.log("User: ", user);
+    // return "success";
     return this.notesService.addNote(note, user);
   }
 
