@@ -4,7 +4,8 @@ import { AppModule } from './app.module';
 import { NestFastifyApplication, FastifyAdapter } from "@nestjs/platform-fastify";
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
+  // const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
+  const app = await NestFactory.create(AppModule);
   const options = new DocumentBuilder()
     .setTitle('NestJs base demo')
     .setDescription('Users and notes API')

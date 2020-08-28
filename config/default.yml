@@ -5,8 +5,8 @@ db:
   host: 'localhost'
   type: 'postgres'
   port: 5432
-  database: 'postgres'
-  password: 'utkarsh'
+  database: 'notes'
+  password: 'password'
 
 jwt:
   expiresIn: 3600
