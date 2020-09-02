@@ -1,7 +1,7 @@
 import { MessageBody, SubscribeMessage, WebSocketGateway, WebSocketServer } from "@nestjs/websockets";
 import { Server } from "ws";
 
-@WebSocketGateway()
+@WebSocketGateway(81)
 export class NotificationGateway {
 
   @WebSocketServer()
@@ -9,6 +9,7 @@ export class NotificationGateway {
 
   @SubscribeMessage("notes")
   async handleMessage(@MessageBody() data: unknown) {
+    console.log(data);
     return "Notes has been updated";
   }
 

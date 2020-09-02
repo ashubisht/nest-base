@@ -1,0 +1,41 @@
+<html>
+
+  <head>
+
+    <script>
+
+      const socket = new WebSocket('ws://localhost:81');
+
+      socket.onopen = function() {
+
+        console.log('Connected');
+
+        socket.send(
+
+          JSON.stringify({
+
+            event: 'notes',
+
+            data: 'utkarsh',
+
+          }),
+
+        );
+
+        socket.onmessage = function(data) {
+
+          console.log(data);
+
+        };
+
+      };
+
+    </script>
+
+  </head>
+
+
+
+  <body></body>
+
+</html>
