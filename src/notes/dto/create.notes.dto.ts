@@ -1,8 +1,6 @@
 import { IsNotEmpty, IsOptional, IsIn } from "class-validator";
 import { NoteStatus } from "../vo/notesStatus.enum";
 
-export { } from "class-validator";
-
 export class CreateNote {
 
   @IsNotEmpty()
