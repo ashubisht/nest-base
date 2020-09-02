@@ -5,6 +5,7 @@ import { HealthModule } from './health/health.module';
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { typeOrmConfig } from './config/typeOrmConfig';
 import { GraphQLModule } from '@nestjs/graphql';
+import { NotificationModule } from './notification/notification.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { GraphQLModule } from '@nestjs/graphql';
     NotesModule,
     AuthModule,
     HealthModule,
+    NotificationModule,
   ],
   controllers: [],
   providers: [],
