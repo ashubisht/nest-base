@@ -1,13 +1,10 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable } from '@nestjs/common';
 import { Logger as UltraLog } from "ultralog";
 
-
 @Injectable()
-export class Logger extends UltraLog {
-
+export class LoggerService extends UltraLog {
   constructor() {
     super("console");
     this.configure({});
   }
-
 }

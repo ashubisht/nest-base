@@ -1,10 +1,10 @@
 import { Controller, Get, Redirect } from '@nestjs/common';
-import { Logger } from 'src/utils/logger';
+import { LoggerService } from 'src/logger/logger.service';
 
 @Controller('health')
 export class HealthController {
 
-  constructor(private logger: Logger) { }
+  constructor(private logger: LoggerService) { }
 
   @Get("/")
   healthCheck() {
